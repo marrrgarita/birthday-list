@@ -1,0 +1,45 @@
+<% unless @items %>
+  <h1>What do you want for your birthday?</h1>
+<% else %>
+  <h1>What <i>else</i> do you want for your birthday?</h1>
+<% end %>
+
+<%= form_for(@item) do |f| %>
+
+<% if @item.errors.any? %>
+  <div id="error_explanation">
+    <h2>Error! Error!</h2>
+    <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    </ul>
+    <% end %>
+  </div>
+<% end %>
+
+
+<div class="field">
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+</div>
+
+<div class="field">
+  <%= f.label :description %><br>
+  <%= f.text_field :description %>
+</div>
+
+<div class="field">
+  <%= f.label :image %><br>
+  <%= f.text_field :image %>
+</div>
+
+<div class="field">
+  <%= f.label :price %><br>
+  <%= f.number_field :price %>
+</div>
+
+<div class="button">
+  <%= f.submit %>
+</div>
+
+<% end %>
