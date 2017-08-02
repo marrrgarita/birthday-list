@@ -1,0 +1,44 @@
+<%= form_for(@item) do |f| %>
+
+<% if @item.errors.any? %>
+  <div id="error_explanation">
+    <h2>Error! Error!</h2>
+    <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<div class="field">
+  <%= f.label :title, "What is it?" %><br>
+  <%= f.text_field :title %>
+</div>
+
+<div class="field">
+  <%= f.label :description, "Tell me more"%><br>
+  <%= f.text_field :description %>
+</div>
+
+<div class="field">
+  <%= f.label :url, "Where can I get it?" %><br>
+  <%= f.text_field :url %>
+</div>
+
+<div class="field">
+  <%= f.label :image, "What does it look like?"%><br>
+  <%= f.text_field :image %>
+</div>
+
+<div class="field">
+  <%= f.label :price, "How much does it cost?" %><br>
+  <%= f.number_field :price, :step => "0.01" %>
+</div>
+
+<div class="button">
+  <%= f.submit %>
+</div>
+
+<% end %>
