@@ -30,7 +30,7 @@ def update
   @item = Item.find(params[:id])
 
   if @item.update_attributes(item_params)
-    redirect_to item_url(@item)
+    redirect_to items_url
   else
     render :edit
   end
