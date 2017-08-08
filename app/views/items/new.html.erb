@@ -1,9 +1,14 @@
-<% unless @items %>
-  <h1>What do you want for your birthday?</h1>
-<% else %>
-  <h1>What <i>else</i> do you want for your birthday?</h1>
-<% end %>
+<div class="content-container">
 
-<%= render 'form' %>
 
-<%= link_to 'Cancel', items_path %>
+  <% unless @items %>
+    <h1>What do you want for your birthday?</h1>
+  <% else %>
+    <h1>What <i>else</i> do you want for your birthday?</h1>
+  <% end %>
+
+  <%= render 'form' %>
+
+
+
+</div>

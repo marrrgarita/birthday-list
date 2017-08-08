@@ -1,3 +1,71 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content-container {
+  width: 58%;
+  margin: 0 auto;
+  background: rgba(239, 237, 234, 0.85);
+  color: #ff8777;
+}
+
+// ------------------------ NEW FORM
+
+.field {
+  font-size: 1.25em;
+  margin: .5em;
+}
+
+input[type="submit"] {
+    border: #f0d16e solid 2px;
+    background: rgba(239, 237, 234, 0.85);
+    color: #f0d16e;
+    font-size: 1em;
+    padding: 5px;
+    /* display: inline-block; */
+}
+
+textarea,
+input[type="text"],
+input[type="number"]{
+    background: #bb3b5e;
+    color: #efedea;
+    border: none;
+    padding: .25em;
+    font-size: 1em;
+}
+
+.form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+// ------------------------ INDEX
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-title {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #bb3b5e;
+}
+
+.item {
+  display: inline-block;
+  width: 30%;
+}
+
+.item img {
+  display: block;
+  width: 90%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.item p {
+  padding: 0;
+  margin: .2em;
+}
