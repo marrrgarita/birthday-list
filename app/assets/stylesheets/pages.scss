@@ -1,0 +1,29 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.birthday-container{
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #8ec7c0;
+  width: 70%;
+  padding: 0.5em;
+  margin-left: 2em;
+}
+
+.hb {
+  font-size: 6em;
+  letter-spacing: -.12em;
+  opacity: 0.75;
+}
+
+.hb:nth-of-type(2) {
+  margin-top: -0.45em;
+}
+
+.name {
+  font-size: 7em;
+  margin-top: -0.4em;
+  letter-spacing: -0.05em;
+}
