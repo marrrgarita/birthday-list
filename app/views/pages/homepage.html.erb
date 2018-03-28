@@ -1,46 +1,58 @@
 <div class="main-container">
 
-  <div class="birthday-container">
 
-    <h2 class="hb">Happy</h2>
-    <h2 class="hb">Birthday</h2>
-    <h1 class="name">Margarita</h1>
+    <div class="birthday-container">
 
+      <h2 class="hb">Happy</h2>
+      <h2 class="hb">Birthday</h2>
+      <h1 class="name">Margarita</h1>
+
+    </div>
+
+    <div class="countdown-container">
+      <div class="time-container">
+        <div class="days count">
+          00
+        </div>
+        <div class="title">
+          days
+        </div>
+      </div>
+      <div class="time-container">
+        <div class="hours count">
+          00
+        </div>
+        <div class="title">
+          hours
+        </div>
+      </div>
+      <div class="time-container">
+        <div class="minutes count">
+          00
+        </div>
+        <div class="title">
+          minutes
+        </div>
+      </div>
+      <div class="time-container">
+        <div class="seconds count">
+          00
+        </div>
+        <div class="title">
+          seconds
+        </div>
+      </div>
+    </div>
+  <div class="flip-container">
+    <div class="flipper">
+      <div class="front">
+        <%=link_to "Get her a gift!", items_url, title: "Get her a gift!", class:"btn-front"%>
+        <!-- <a href="#" class="btn-front">get her a gift</a> -->
+      </div>
+      <div class="back">
+        <%=link_to "Get her a gift!", items_url, title: "Get her a gift!", class:"btn-back"%>
+        <!-- <a href="#" class="btn-back">get her a gift</a> -->
+      </div>
+    </div>
   </div>
-
-  <div class="countdown-container">
-    <div class="time-container">
-      <div class="days count">
-        05
-      </div>
-      <div class="title">
-        days
-      </div>
-    </div>
-    <div class="time-container">
-      <div class="hours count">
-        04
-      </div>
-      <div class="title">
-        hours
-      </div>
-    </div>
-    <div class="time-container">
-      <div class="minutes count">
-        03
-      </div>
-      <div class="title">
-        minutes
-      </div>
-    </div>
-    <div class="time-container">
-      <div class="seconds count">
-        01
-      </div>
-      <div class="title">
-        seconds
-      </div>
-    </div>
-  </div>
-
 </div>

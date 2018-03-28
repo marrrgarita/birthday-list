@@ -1,8 +1,13 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$bg-color: #efedea;
+$main-header: #8ec7c0;
+
 
 .main-container{
+  position: absolute;
+  top: 40%;
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   width: 70%;
@@ -12,22 +17,22 @@
 
 .birthday-container{
   font-weight: 900;
-  color: #8ec7c0;
+  color: $main-header;
 }
 
 .hb {
-  font-size: 5em;
+  font-size: 6em;
   letter-spacing: -.12em;
   opacity: 0.75;
 }
 
 .hb:nth-of-type(2) {
-  margin-top: -0.45em;
+  margin-top: -0.4em;
 }
 
 .name {
-  font-size: 6em;
-  margin-top: -0.4em;
+  font-size: 7em;
+  margin-top: -0.35em;
   letter-spacing: -0.05em;
 }
 
@@ -43,6 +48,63 @@
   font-size: 7em;
 }
 
-.title {
+.title,
+.flip-container {
   padding-left: 1em;
+}
+
+.flip-container {
+  margin-top: 1em;
+  perspective: 1000px;
+  position: relative;
+  height: 50px;
+  width: 160px;
+}
+
+.flipper {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  transition: 0.75s;
+}
+
+.front,
+.back {
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateX(0deg);
+}
+
+.back {
+  transform: rotateX(180deg);
+}
+
+.btn-back,
+.btn-front {
+  display: block;
+  padding: 10px;
+  border: 5px solid black;
+}
+
+.btn-front{
+  background-color: black;
+  color: $bg-color;
+}
+
+.btn-back{
+  //background-color: $bg-color;
+  color: black;
+}
+
+.flipper:hover {
+  transform: rotateX(180deg);
 }
