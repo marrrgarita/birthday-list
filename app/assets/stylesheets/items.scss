@@ -1,12 +1,18 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$dark-pink: #bb3b5e;
+$items-bg: rgba(239, 237, 234, 1);
+$teal: #8ec7c0;
+
 
 .content-container {
-  width: 58%;
-  margin: 0 auto;
-  background: rgba(239, 237, 234, 0.85);
+  font-family: 'Lato', sans-serif;
+  position: absolute;
+  top: 0;
+  width: 100%;
   color: #ff8777;
+  padding-top: 3em;
 }
 
 // ------------------------ NEW FORM
@@ -42,30 +48,66 @@ input[type="number"]{
 
 // ------------------------ INDEX
 
-.items-container {
-  display: flex;
-  flex-wrap: wrap;
+#buy-header {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -.1em;
+  padding-left: 1.5em;
 }
 
-.item-title {
-  text-transform: uppercase;
-  font-size: 1.5em;
-  color: #bb3b5e;
+.items-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.item-card {
+  background: $items-bg;
+  font-family: 'Lato', sans-serif;
+  margin: 2em 0;
+  width: 29%;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.item-image img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  opacity:0.9!important;
+  filter: grayscale(25%) contrast(110%);
+}
+
+.item-image img:hover {
+  filter: grayscale(100%) blur(10px);
 }
 
 .item {
-  display: inline-block;
-  width: 30%;
+  height: 125px;
+  background-color: $items-bg;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: solid 4px $teal;
+  padding: 1em;
+  position: relative;
 }
 
-.item img {
-  display: block;
-  width: 90%;
-  height: 50%;
-  object-fit: cover;
+.item-title {
+  width: 65%;
+  padding-top: 0.2em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: black;
 }
 
-.item p {
-  padding: 0;
-  margin: .2em;
+#buy-btn {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+  width: 110px;
+  height: 30px;
 }

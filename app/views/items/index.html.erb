@@ -1,16 +1,36 @@
-<div class="content-container">
-  <h1><i>Please</i> buy me:</h1>
+<div class="content-container" id="all-items">
+
+  <h2 class="hb" id="buy-header">Buy</h2>
+  <h2 class="hb" id="buy-header">Her:</h2>
 
   <div class="items-container">
 
     <% @items.each do |item| %>
-      <div class="item">
-        <p class="item-title"><%= item.title %></p>
+    <div class="item-card">
+      <div class="item-image">
         <%= link_to image_tag(item.image), item.url, target: :_blank, class: "main-image" %>
-        <p>Price: $<%= item.price %></p>
-        <p><a href=" <%= item.url%> ">Link</a> | <%= link_to "Edit", edit_item_path(item) %> | <%= link_to "Delete", item, method: :delete, data: {confirm:"Are you sure you want to delete this item?"} %></p>
-        <p><%= item.description %></p>
       </div>
+      <div class="item-overlay">
+      </div>
+      <div class="item">
+        <p class="item-price">$<%= item.round_price %>0</p>
+        <p class="item-title"><%= item.title %></p>
+        <!-- <p><a href=" <%= item.url%> ">Link</a> | <%= link_to "Edit", edit_item_path(item) %> | <%= link_to "Delete", item, method: :delete, data: {confirm:"Are you sure you want to delete this item?"} %></p>
+        <p><%= item.description %></p> -->
+        <div class="flip-container" id="buy-btn">
+          <div class="flipper buy-btn-cont">
+            <div class="front buy-btn-front">
+              <%=link_to "BUY NOW", items_url, title: "Get her a gift!", class:"btn-front"%>
+              <!-- <a href="#" class="btn-front">get her a gift</a> -->
+            </div>
+            <div class="back buy-btn-back">
+              <%=link_to "BUY NOW", items_url, title: "Get her a gift!", class:"btn-back"%>
+              <!-- <a href="#" class="btn-back">get her a gift</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
   <%= link_to "I would also like...", new_item_path %>

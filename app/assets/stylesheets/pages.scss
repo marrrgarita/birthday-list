@@ -1,9 +1,7 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$bg-color: #efedea;
 $main-header: #8ec7c0;
-
 
 .main-container{
   position: absolute;
@@ -12,7 +10,7 @@ $main-header: #8ec7c0;
   text-transform: uppercase;
   width: 70%;
   padding: 0.5em;
-  margin-left: 2em;
+  margin-left: 4em;
 }
 
 .birthday-container{
@@ -46,65 +44,4 @@ $main-header: #8ec7c0;
 
 .count {
   font-size: 7em;
-}
-
-.title,
-.flip-container {
-  padding-left: 1em;
-}
-
-.flip-container {
-  margin-top: 1em;
-  perspective: 1000px;
-  position: relative;
-  height: 50px;
-  width: 160px;
-}
-
-.flipper {
-  position: absolute;
-  transform-style: preserve-3d;
-  width: 100%;
-  height: 100%;
-  transition: 0.75s;
-}
-
-.front,
-.back {
-  text-align: center;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.front {
-  z-index: 2;
-  transform: rotateX(0deg);
-}
-
-.back {
-  transform: rotateX(180deg);
-}
-
-.btn-back,
-.btn-front {
-  display: block;
-  padding: 10px;
-  border: 5px solid black;
-}
-
-.btn-front{
-  background-color: black;
-  color: $bg-color;
-}
-
-.btn-back{
-  //background-color: $bg-color;
-  color: black;
-}
-
-.flipper:hover {
-  transform: rotateX(180deg);
 }
